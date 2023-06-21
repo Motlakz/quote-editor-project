@@ -1,0 +1,9 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to quote"), quote_path %>
+
+  <header class="header">
+    <h1>Edit quote</h1>
+  </header>
+
+  <%= render "shared/form", quote: @quote %>
+</main>
