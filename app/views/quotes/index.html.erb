@@ -1,8 +1,15 @@
 <main class="container">
-  <header class="header">
+  <header class="header display-flex">
     <h1>Quotes</h1>
-    <%= link_to "New quote", new_quote_path, class: "btn btn--primary" %>
+  <%= link_to "New Quote", new_quote_path, class: 'btn btn--primary' %>
   </header>
-  
-  <%= render "shared/quote" %>
+  <section>
+    <ol class="list-group list-group-numbered">
+      <% @quote.each do |quote| %>
+        <li class="list-group-item">
+          <%= link_to quote.title, quote %>
+        </li>
+      <% end %>
+    </ol>
+  </section>
 </main>
